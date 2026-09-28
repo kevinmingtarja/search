@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package search.wal;
+
+message WalEntry {
+  repeated Document upserts = 1;
+  repeated uint64 deletes = 2;
+}
+
+message Document {
+  optional uint64 id = 1;
+  // JSON object of the non-id attributes.
+  optional bytes attributes = 2;
+}

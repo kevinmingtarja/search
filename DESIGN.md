@@ -1,0 +1,4 @@
+- Ingester
+- Indexer
+- Querier
+- Object Storage

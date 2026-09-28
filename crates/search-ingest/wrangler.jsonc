@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "search-ingest",
+  "main": "build/index.js",
+  "compatibility_date": "2026-09-27",
+  "build": {
+    "command": "cargo install -q \"worker-build@^0.8\" && worker-build --release"
+  },
+  "r2_buckets": [
+    { "binding": "WAL", "bucket_name": "search-index" }
+  ]
+}
